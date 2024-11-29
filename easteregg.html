@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><3</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+        body {
+            margin: 0;
+            overflow: hidden;
+            height: 100vh; /* Ustaw wysokość na 100% widoku */
+            background-image: url('https://64.media.tumblr.com/086857f81b2729e9fb72e67d99a77dae/tumblr_pmpo3sfGmL1runoqyo6_r1_540.gif');
+            background-size: cover; /* Dopasuj tło do rozmiaru okna */
+            background-position: center; /* Wyśrodkowanie tła */
+            background-repeat: no-repeat; /* Nie powtarzaj tła */
+            display: flex; /* Użyj flexboxa do centrowania */
+            justify-content: center; /* Wyśrodkowanie poziome */
+            align-items: center; /* Wyśrodkowanie pionowe */
+            flex-direction: column; /* Układ pionowy dla tekstu i GIFa */
+        }
+
+        .gif-container {
+            position: relative;
+            z-index: 1; /* Ustaw warstwę powyżej tła */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img {
+            max-width: 25%; /* Zmniejsz maksymalną szerokość na 25% */
+            height: auto; /* Utrzymaj proporcje */
+        }
+
+        .typing-demo {
+            text-align: center; /* Wyśrodkowanie tekstu */
+            color: white; /* Kolor tekstu */
+            margin-top: 20px; /* Odstęp nad napisem */
+        }
+
+        .line {
+            display: inline-block; /* Umożliwia animację na bloku */
+            overflow: hidden; /* Ukrywanie nadmiarowego tekstu */
+            white-space: nowrap; /* Zatrzymanie białych znaków w tekście */
+            border-right: 3px solid; /* Dodanie migającego kursora */
+            font-family: 'Pixelify Sans', sans-serif; /* Ustawienie czcionki */
+            font-size: 1.5em; /* Ustawienie rozmiaru czcionki */
+            opacity: 0; /* Ukryj tekst na początku */
+        }
+
+        @keyframes typing {
+            from {
+                width: 0; /* Rozpoczęcie od zera */
+                opacity: 1; /* Ustaw widoczność na 1 */
+            }
+            to {
+                width: 100%; /* Zakończenie na pełnej szerokości */
+                opacity: 1; /* Ustaw widoczność na 1 */
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent; /* Migający kursor */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gif-container">
+        <img src="https://i.pinimg.com/originals/dc/dd/45/dcdd45bc02f89241babe4ab61ce69f01.gif" alt="Centered GIF">
+    </div>
+    <div class="typing-demo">
+        <div class="line" style="animation: typing 4s steps(40) forwards, blink .5s step-end infinite alternate; animation-delay: 0s;">PL: dziękuję wszystkim za przeglądanie mojej strony,</div>
+        <div class="line" style="animation: typing 4s steps(40) forwards, blink .5s step-end infinite alternate; animation-delay: 4s;">pracowałem nad nią ciężko i długo żeby ona wogóle ujrzała światło dzienne</div>
+        <div class="line" style="animation: typing 4s steps(40) forwards, blink .5s step-end infinite alternate; animation-delay: 8s;">i też wielkie dzięki dla kubsonxtm za pomoc w upublicznieniu tej strony.</div>
+		<div class="line" style="animation: typing 4s steps(40) forwards, blink .5s step-end infinite alternate; animation-delay: 12s;">KURWA CZEMU TO SIĘ RUSZA</div>
+        <div class="line" style="animation: typing 4s steps(40) forwards, blink .5s step-end infinite alternate; animation-delay: 16s;">EN: thank you all for browsing my site,</div>
+        <div class="line" style="animation: typing 4s steps(40) forwards, blink .5s step-end infinite alternate; animation-delay: 20s;">I worked hard and long on it to make it see the light of day at all</div>
+        <div class="line" style="animation: typing 4s steps(40) forwards, blink .5s step-end infinite alternate; animation-delay: 24s;">and also big thanks to kubsonxtm for helping sharing this site.</div>
+		<div class="line" style="animation: typing 4s steps(40) forwards, blink .5s step-end infinite alternate; animation-delay: 28s;">kolejna strona wkrotce ;* / next site soon ;*</div>
+    </div>
+</body>
+</html>

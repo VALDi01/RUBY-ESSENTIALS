@@ -1,0 +1,350 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+    <meta charset="utf-8"/>
+    <title> &#9733; RUBY ESSENTIALS &#9733; </title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="A page where you can find basic information about the Redmi Note 12 Pro 5G/Pro Plus phone, custom roms, drivers and necessary tools."/>
+    <meta name="keywords" content="Redmi Note 12 Pro 5G, Xiaomi, Mediatek, MTK, Redmi Note 12 Pro Plus 5G, Redmi Note 12 Pro Discovery"/>
+    <meta name="author" content="VALDi"/>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Courier New', monospace;
+            opacity: 0; /* Start hidden */
+            animation: fadeIn 0.5s ease-in forwards; /* Fade-in animation */
+            position: relative; /* Relative positioning for particle background */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Stylowanie nagłówka */
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Stylowanie napisu CUSTOM ROMS */
+        .custom-roms-header {
+            text-align: center;
+            font-size: 3em;
+            color: #FFFFFF;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+            margin-top: 20px;
+        }
+
+        /* Stylowanie kart */
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .card {
+            opacity: 0; /* Start hidden */
+            animation: fadeIn 0.5s ease-in forwards; /* Fade-in animation for cards */
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(255, 255, 255, 0.4);
+        }
+
+        .card h3 {
+            text-align: center;
+            color: #FFFFFF;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .card button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #949494;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .card button:hover {
+            background-color: #4d4d4d;
+        }
+
+        /* Stylowanie informacji o romach */
+        .info {
+            color: #4287f5;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Styl dla wiadomości */
+        marquee {
+            margin-bottom: 20px;
+        }
+
+        /* Fullscreen container for tsParticles */
+        #tsparticles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1; /* Place particles behind content */
+        }
+    </style>
+    <!-- Load tsParticles library -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <!-- Particle background -->
+    <div id="tsparticles"></div>
+
+    <marquee scroll>
+        I (and many other maintainers) am not responsible for bricked devices, dead SD cards, thermonuclear war, or you getting fired because the alarm app failed. Please do some research if you have any concerns about features included in ROMs before flashing! YOU are choosing to make these modifications, and if you point the finger at me for messing up your device, I will laugh at you. Hard &amp; a lot.
+    </marquee>
+
+    <!-- Nagłówek z obrazem zamiast przycisku Home -->
+    <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+        <a href="index.html">
+            <img src="home.png" alt="Home" style="width: 50px; height: 50px; margin-right: 20px; cursor: pointer;">
+        </a>
+        <h1 class="custom-roms-header" style="flex-grow: 1; text-align: center;"><b>CUSTOM ROMS</b></h1>
+    </div>
+
+    <p class="info"><b>Don't worry if the rom has codename rubyx instead of ruby. This is the new codename corresponding to each of these phones (Redmi Note 12 Pro 5G/Discovery/Plus).<br>This means that this rom will work on all these phones.<br>(finally you won't have to look for codenames like rubypro to not mess up phones with other systems yaay!)</b></p>
+
+    <div class="cards-container">
+
+        <!-- Karta 1 -->
+        <div class="card" style="animation-delay: 0.1s;">
+            <h3>LineageOS by bengris</h3>
+            <p>LineageOS, developed by <b>bengris</b>, is an <b>unofficial</b> Android ROM that aims to provide a clean and customizable AOSP experience. Built on Android 14, it focuses on performance and privacy, offering a stable and efficient environment without unnecessary bloatware. LineageOS retains essential features while ensuring a user-friendly interface, making it a popular choice for those seeking an optimized Android experience. As a versatile and widely used recovery image, it supports various custom ROMs for devices like the Redmi Note 12 Pro 5G.</p>
+            <button onclick="window.location.href='https://github.com/xiaomi-mediatek-devs/releases/releases/tag/rubyx-20240911';">
+                Bengris LineageOS site on GitHub
+            </button>
+        </div>
+
+        <!-- Karta 2 -->
+        <div class="card" style="animation-delay: 0.2s;">
+            <h3>Pixel OS by kasun</h3>
+            <p>PixelOS is an <b>unofficial</b> Android ROM developed by <b>kasunherath</b>, designed to replicate the experience of Google's Pixel devices. It features a clean and smooth user interface, along with essential Pixel functionalities and optimizations. Built on Android 14, PixelOS provides limited customization options, focusing on a stable and user-friendly experience. The inclusion of the PixelProps add-on allows users to enhance the ROM's capabilities further, ensuring a seamless performance akin to that of original Pixel phones.</p>
+            <button onclick="window.location.href='https://sourceforge.net/projects/rubypro/files/ROMs/PixelOS/fourteen/2024-09-18/';">
+                Download link on SourceForge
+            </button>
+            <button onclick="window.location.href='https://t.me/silent_sweet';">
+                Kasun's support group on TG
+            </button>
+        </div>
+
+        <!-- Karta 3 -->
+        <div class="card" style="animation-delay: 0.3s;">
+            <h3>Infinity X by Allien10x</h3>
+            <p>Infinity X is an <b>unofficial</b> Android ROM developed by <b>Allien10x</b>, known for its crDroid-inspired design and extensive customization options. While it offers a rich feature set aimed at enhancing user experience, the developer has announced limited support, meaning users should flash at their own risk. Designed for performance and personalization, Infinity X combines stability with a wide range of mods, making it a popular choice among enthusiasts.</p>
+            <button onclick="window.location.href='https://sourceforge.net/projects/infinity-x/files/ruby/14/gapps/';">
+                Download link on SourceForge
+            </button>
+            <button onclick="window.location.href='https://t.me/InfinityXGroup';">
+                Infinity X group on TG
+            </button>
+        </div>
+
+        <!-- Karta 4 -->
+        <div class="card" style="animation-delay: 0.4s;">
+            <h3>RisingOS by hiroshi</h3>
+            <p>RisingOS is an <b>official</b> Android-based ROM developed by <b>Hiroshi</b>, designed for users who value stability and simplicity. It features a pre-installed PIF fix for enhanced system integrity and offers various customization options, including launcher and boot animation changes. RisingOS also integrates Dolby Atmos for improved audio quality, making it a compelling alternative for those seeking a balanced blend of performance and personalization.</p>
+            <button onclick="window.location.href='https://t.me/gems_hiro/4081/5819';">
+                Download link on Telegram group
+            </button>
+            <button onclick="window.location.href='http://t.me/gems_hiro';">
+                Support group
+            </button>
+        </div>
+
+        <!-- Karta 5 -->
+        <div class="card" style="animation-delay: 0.5s;">
+            <h3>EvolutionX by Hiroshi</h3>
+            <p>EvolutionX, developed by <b>Hiroshi</b>, is an <b>unofficial</b> Android ROM that brings a Pixel-like experience to users. Based on Android 14, it focuses on customization and performance while maintaining a clean and smooth user interface. With various features borrowed from Google's Pixel devices, EvolutionX provides users with access to the latest Android functionalities and enhancements. It also supports various customization options, making it suitable for those who want a balance between stock Android and added flexibility.</p>
+            <button onclick="window.location.href='https://t.me/gems_hiro/4081/7363';">
+                Download link on Telegram
+            </button>
+            <button onclick="window.location.href='http://t.me/gems_hiro';">
+                Support group
+            </button>
+        </div>
+
+        <!-- Karta 6 -->
+        <div class="card" style="animation-delay: 0.6s;">
+            <h3>LMODroid by Murat_onyil / RatmuX</h3>
+            <p>LMODroid, created by <b>Murat_onyil and RatmuX</b>, is an <b>unofficial</b> Android ROM designed for users seeking a clean, vanilla experience. Based on Android 14, it comes with essential features and tools, including MIUI Camera and Dolby Atmos for enhanced audio quality. While it offers a straightforward interface, LMODroid is suitable for those who prefer minimal customizations while still enjoying a solid performance. Its signed build ensures a smooth installation process, making it accessible for both novice and experienced users. MIUI Camera Included, Dolby Atmos Included.</p>
+            <button onclick="window.location.href='https://github.com/RatmuX/Releases/releases/tag/LMODroid';">
+                Download link on GitHub
+            </button>
+            <button onclick="window.location.href='http://t.me/RatmuXCloud';">
+                Support group
+            </button>
+            <button onclick="window.location.href='https://github.com/MindTheGapps/14.0.0-arm64/releases/tag/MindTheGapps-14.0.0-arm64-20240612_135921';">
+                GAPPS
+            </button>
+        </div>
+		
+		        <!-- Karta 7 -->
+        <div class="card" style="animation-delay: 0.7s;">
+            <h3>HyperOS LiteX by nadzier5</h3>
+            <p>HyperOS LiteX, developed by <b>nadzier5</b>, is an <b>unofficial</b> Android ROM that focuses on optimizing performance and efficiency for a streamlined user experience. Based on Android 14, it offers a lightweight design with essential features, ensuring smooth operation on a variety of devices. The ROM includes various customization options while maintaining system stability, making it ideal for users who prefer a responsive and fast interface. With its emphasis on minimalism and speed, HyperOS LiteX caters to those looking for a reliable and user-friendly alternative to stock Android. <font color="#4d4d4d">(In my honest opinion, fuck HyperOS, I don't know why ChatGPT wrote “users who prefer a responsive and fast interface”, “emphasis on minimalism and speed” XDXD. But I haven't actually tested this ROM, so I won't comment further.)</font></p>
+            <button onclick="window.location.href='https://t.me/RedmiNote12ProPlusUpdates/73';">
+                Download link on Telegram
+            </button>
+            <button onclick="window.location.href='https://t.me/HyperLiteX_discussion';">
+                Support group
+            </button>
+        </div>
+		
+				        <!-- Karta 8 -->
+        <div class="card" style="animation-delay: 0.8s;">
+            <h3>AlphaDroid 2.1 by Allien10X</h3>
+            <p>AlphaDroid 2.1, developed by <b>Allien10X</b>, is an <b>unofficial</b> Android ROM designed to enhance performance and customization for users. Built on Android 14, it offers a clean and intuitive interface with a variety of features tailored to optimize device speed and efficiency. AlphaDroid 2.1 includes advanced customization options, allowing users to personalize their experience while maintaining stability. With a focus on user-friendly performance and flexibility, this ROM is suitable for those looking for a robust alternative to standard Android systems.</p>
+            <button onclick="window.location.href='https://sourceforge.net/projects/roms-garbages/files/Roms/Ruby/AlphaDroidtest/';">
+                Download link on sourceforge
+            </button>
+            <button onclick="window.location.href='https://t.me/RubyAOSP';">
+                Support group
+            </button>
+        </div>
+    </div>
+    <script>
+        // Initialize tsParticles
+        particlesJS("tsparticles", {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    },
+                    "image": {
+                        "src": "img/github.svg",
+                        "width": 100,
+                        "height": 100
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 6,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 400,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+</body>
+</html>

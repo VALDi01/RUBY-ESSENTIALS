@@ -1,0 +1,232 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+    <meta charset="utf-8"/>
+    <title> &#9733; RUBY ESSENTIALS &#9733; </title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="A page where you can find basic information about the Redmi Note 12 Pro 5G/Pro Plus phone, custom roms, drivers and necessary tools."/>
+    <meta name="keywords" content="Redmi Note 12 Pro 5G, Xiaomi, Mediatek, MTK, Redmi Note 12 Pro Plus 5G, Redmi Note 12 Pro Discovery"/>
+    <meta name="author" content="VALDi"/>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Courier New', monospace;
+            opacity: 0;
+            animation: fadeIn 0.5s ease-in forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
+            margin: 20px 0;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        button {
+            width: 220px;
+            height: 50px;
+            font-size: 18px;
+            background-color: #949494;
+            color: black;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 10px 0;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background-color: #4d4d4d;
+            transform: scale(1.05);
+        }
+
+        .phone-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            padding: 20px;
+            border: 2px solid #949494;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .phone-info img {
+            max-width: 200px;
+            max-height: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            margin-right: 20px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        .phone-details {
+            max-width: 400px;
+        }
+
+        /* Style for the tsParticles canvas */
+        #tsparticles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Ensure particles are behind other elements */
+        }
+    </style>
+</head>
+<body>
+    <marquee scroll>
+        I (and many other maintainers) am not responsible for bricked devices, dead SD cards, thermonuclear war, or you getting fired because the alarm app failed. Please do some research if you have any concerns about features included in ROMs before flashing! YOU are choosing to make these modifications, and if you point the finger at me for messing up your device, I will laugh at you. Hard &amp; a lot.
+    </marquee>
+
+    <h1> <b>Redmi Note 12 Pro 5G/Plus/Discovery Site</b> </h1>
+
+    <div class="phone-info">
+        <img id="phoneImage" src="https://bsimg.nl/images/xiaomi-redmi-note-12-pro-5g-8gb-256gb-zwart_1.png/meIbqb6x6qfNVZEcLmDWlVkrFrw%3D/fit-in/771x1200/filters%3Aformat%28webp%29%3Aupscale%28%29" alt="Redmi Note 12 Pro 5G">
+        <div class="phone-details">
+            <h2>Redmi Note 12 Pro 5G</h2>
+            <p>This phone is equipped with a MediaTek processor, stunning display, and powerful camera features. Perfect for both casual users and tech enthusiasts.</p>
+            <button onclick="window.location.href='https://www.mi.com/global/product/redmi-note-12-pro-5g/';">
+                More info on Xiaomi's site
+            </button>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <button onclick="window.location.href='recovery.html';">Recovery</button>
+        <button onclick="window.location.href='roms.html';">Custom Roms</button>
+        <button onclick="window.location.href='mods.html';">Mods</button>
+        <button onclick="window.location.href='tools.html';">Tools</button>
+        <button onclick="window.location.href='groups.html';">Useful groups and links</button>
+    </div>
+
+    <div id="tsparticles"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
+    <script>
+        let clickCount = 0;
+
+        document.getElementById("phoneImage").onclick = function() {
+            clickCount++;
+            if (clickCount === 5) {
+                window.location.href = 'easteregg.html';
+            }
+        };
+
+        tsParticles.load("tsparticles", {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 6,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": false,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 400,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": false
+        });
+    </script>
+</body>
+</html>

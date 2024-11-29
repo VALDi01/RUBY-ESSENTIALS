@@ -1,0 +1,255 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+    <meta charset="utf-8"/>
+    <title> &#9733; RUBY ESSENTIALS &#9733; </title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="A page where you can find basic information about the Redmi Note 12 Pro 5G/Pro Plus phone, custom roms, drivers and necessary tools."/>
+    <meta name="keywords" content="Redmi Note 12 Pro 5G, Xiaomi, Mediatek, MTK, Redmi Note 12 Pro Plus 5G, Redmi Note 12 Pro Discovery"/>
+    <meta name="author" content="VALDi"/>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Courier New', monospace;
+            opacity: 0;
+            animation: fadeIn 0.5s ease-in forwards;
+            position: relative; /* Relative positioning for particle background */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Stylowanie napisu Recovery */
+        .recovery-title {
+            text-align: center;
+            font-size: 3em;
+            color: #FFFFFF;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+            margin-top: 20px;
+        }
+
+        /* Stylowanie kart */
+        .cards-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .card {
+			opacity: 0; /* Start hidden */
+			animation: fadeIn 0.5s ease-in forwards; /* Fade-in animation for cards */
+
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(255, 255, 255, 0.4);
+        }
+
+        .card h3 {
+            text-align: center;
+            color: #FFFFFF;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .card button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #949494;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .card button:hover {
+            background-color: #4d4d4d;
+        }
+
+        .card a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Fullscreen container for tsParticles */
+        #tsparticles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1; /* Place particles behind content */
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Particle background -->
+    <div id="tsparticles"></div>
+
+    <marquee scroll>
+        I (and many other maintainers) am not responsible for bricked devices, dead SD cards, thermonuclear war, or you getting fired because the alarm app failed. Please do some research if you have any concerns about features included in ROMs before flashing! YOU are choosing to make these modifications, and if you point the finger at me for messing up your device, I will laugh at you. Hard &amp; a lot.
+    </marquee>
+
+    <!-- Nagłówek z obrazem zamiast przycisku Home -->
+    <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+        <a href="index.html">
+            <img src="home.png" alt="Home" style="width: 50px; height: 50px; margin-right: 20px; cursor: pointer;">
+        </a>
+        <h1 class="recovery-title" style="flex-grow: 1; text-align: center;">Recovery</h1>
+    </div>
+
+    <!-- Karty zamiast tabeli -->
+    <div class="cards-container">
+
+        <!-- Karta 1 -->
+        <div class="card"  style="animation-delay: 0.1s;">
+            <h3>LineageOS Recovery by bengris</h3>
+            <p><b>Unofficial</b> LineageOS recovery image created by <b>bengris32</b>. It is very universal and used most likely in every custom rom for this phone. Unmodded, <b>there is no ksu or magisk on it.</b></p>
+            <button onclick="window.location.href='https://github.com/xiaomi-mediatek-devs/releases/releases/download/rubyx-20240911/boot.img';">
+                DDL from his github
+            </button>
+            <button onclick="window.location.href='https://github.com/xiaomi-mediatek-devs/releases/releases/tag/rubyx-20240911';">
+                Bengris LineageOS site on github
+            </button>
+        </div>
+
+        <!-- Karta 2 -->
+        <div class="card"  style="animation-delay: 0.2s;">
+            <h3>Pixel OS Recovery by kasun</h3>
+            <p><b>Unofficial</b> Pixel OS recovery image created by <b>kasunherath</b>. It is actually LineageOS recovery, only for Pixel OS. <br><b><font color="red">USE ONLY WITH PIXELOS ROM BY KASUNHERATH.</font></b><br>Unmodded, <b>there is no ksu or magisk on it.</b></p>
+            <button onclick="window.location.href='https://sourceforge.net/projects/rubypro/files/ROMs/PixelOS/fourteen/2024-09-18/boot.img/download';">
+                Download link on sourceforge
+            </button>
+            <button onclick="window.location.href='https://t.me/silent_sweet';">
+                Kasun's support group on tg
+            </button>
+        </div>
+
+        <!-- Karta 3 -->
+        <div class="card"  style="animation-delay: 0.3s;">
+            <h3>Infinity X Recovery by Allien10x</h3>
+            <p><b>Unofficial</b> Infinity X or Project Infinity recovery image created by <b>Allien10x</b>. It is actually LineageOS recovery, only for Infinity X. <br><b><font color="red">USE ONLY WITH INFINITY X ROM BY ALLIEN10X.</font></b><br>Unmodded, <b>there is no ksu or magisk on it.</b></p>
+            <button onclick="window.location.href='https://sourceforge.net/projects/rubypro/files/ROMs/PixelOS/fourteen/2024-09-18/boot.img/download';">
+                Download link on sourceforge
+            </button>
+            <button onclick="window.location.href='https://t.me/InfinityXGroup';">
+                Infinity X group on tg
+            </button>
+        </div>
+
+        <!-- Karta 4 -->
+        <div class="card"  style="animation-delay: 0.4s;">
+            <h3>HyperOS recovery by Xiaomi</h3>
+            <p><b>Official</b> HyperOS recovery image.
+			Basically, this is the stock recovery image that is in HyperOS.
+			The button redirects to the xmfirmwaredownloader page, where you can download HyperOS stock images.
+			Just download the Fastboot rom (not recovery) and extract the .tar.gz file and there should be a boot.img in the img folder.</p>
+            <button onclick="window.location.href='https://xmfirmwareupdater.com/hyperos/ruby/';">
+                xmfirmwaredownloader.com
+            </button>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.40.2/tsparticles.min.js"></script>
+    <script>
+        tsParticles.load("tsparticles", {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 6,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "push": {
+                        "particles_nb": 4
+                    }
+                }
+            },
+            "retina_detect": false
+        });
+    </script>
+</body>
+</html>

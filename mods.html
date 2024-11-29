@@ -1,0 +1,279 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+    <meta charset="utf-8"/>
+    <title> &#9733; RUBY ESSENTIALS &#9733; </title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="A page where you can find basic information about the Redmi Note 12 Pro 5G/Pro Plus phone, custom roms, drivers and necessary tools."/>
+    <meta name="keywords" content="Redmi Note 12 Pro 5G, Xiaomi, Mediatek, MTK, Redmi Note 12 Pro Plus 5G, Redmi Note 12 Pro Discovery"/>
+    <meta name="author" content="VALDi"/>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Courier New', monospace;
+            opacity: 0;
+            animation: fadeIn 0.5s ease-in forwards;
+            margin: 0;
+            padding: 0;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .custom-mods-header {
+            text-align: center;
+            font-size: 3em;
+            color: #FFFFFF;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+            margin-top: 20px;
+        }
+
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .card {
+            opacity: 0;
+            animation: fadeIn 0.5s ease-in forwards;
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(255, 255, 255, 0.4);
+        }
+
+        .card h3 {
+            text-align: center;
+            color: #FFFFFF;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .card button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #949494;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .card button:hover {
+            background-color: #4d4d4d;
+        }
+
+        .info {
+            color: #4287f5;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        marquee {
+            margin-bottom: 20px;
+        }
+
+        .card img {
+            display: block;
+            margin: 0 auto 15px;
+            width: 50px;
+            height: 50px;
+        }
+
+        #tsparticles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Particles container -->
+    <div id="tsparticles"></div>
+
+    <marquee scroll>
+        I (and many other maintainers) am not responsible for bricked devices, dead SD cards, thermonuclear war, or you getting fired because the alarm app failed. Please do some research if you have any concerns about features included in ROMs before flashing! YOU are choosing to make these modifications, and if you point the finger at me for messing up your device, I will laugh at you. Hard &amp; a lot.
+    </marquee>
+
+    <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+        <a href="index.html">
+            <img src="home.png" alt="Home" style="width: 50px; height: 50px; margin-right: 20px; cursor: pointer;">
+        </a>
+        <h1 class="custom-mods-header" style="flex-grow: 1; text-align: center;"><b>MODS</b></h1>
+    </div>
+
+    <div class="cards-container">
+        <!-- Magisk -->
+        <div class="card" style="animation-delay: 0.1s;">
+            <img src="images/magisk.png" alt="Magisk Icon">
+            <h3>Magisk</h3>
+            <p>A powerful tool for rooting Android devices, enabling modifications without altering system partitions.</p>
+            <button onclick="window.location.href='https://github.com/topjohnwu/Magisk/releases'">Download Magisk</button>
+        </div>
+
+        <!-- KernelSU -->
+        <div class="card" style="animation-delay: 0.2s;">
+            <img src="images/kernelsu.png" alt="KernelSU Icon">
+            <h3>KernelSU</h3>
+            <p>A kernel-level rooting framework designed to simplify device customization and management.</p>
+            <button onclick="window.location.href='https://github.com/tiann/KernelSU/releases'">Download KernelSU</button>
+        </div>
+
+        <!-- LSPosed -->
+        <div class="card" style="animation-delay: 0.3s;">
+            <img src="images/lsposed.png" alt="LSPosed Icon">
+            <h3>LSPosed</h3>
+            <p>A lightweight and efficient framework for managing Xposed modules on modern Android systems.</p>
+            <button onclick="window.location.href='https://github.com/LSPosed/LSPosed/releases'">Download LSPosed</button>
+        </div>
+
+        <!-- Iconify -->
+        <div class="card" style="animation-delay: 0.4s;">
+            <img src="images/iconify.png" alt="Iconify Icon">
+            <h3>Iconify</h3>
+            <p>An app to customize and personalize system icons, creating a unique Android experience.</p>
+            <button onclick="window.location.href='https://github.com/dkanada/iconify/releases'">Download Iconify</button>
+        </div>
+
+        <!-- HyperCeiler -->
+        <div class="card" style="animation-delay: 0.5s;">
+            <img src="images/hyperceiler.png" alt="HyperCeiler Icon">
+            <h3>HyperCeiler</h3>
+            <p>A performance-enhancing tool for optimizing and managing system resources effectively.</p>
+            <button onclick="window.location.href='https://hyperceiler.sevtinge.cc/en/Download'">Download HyperCeiler</button>
+        </div>
+
+        <!-- Viper4Android -->
+        <div class="card" style="animation-delay: 0.6s;">
+            <img src="images/viper4android.png" alt="Viper4Android Icon">
+            <h3>Viper4Android</h3>
+            <p>A powerful audio modification tool that enhances sound quality with advanced equalizer and effects.</p>
+            <button onclick="window.location.href='https://github.com/AndroidAudioMods/ViPER4Android'">Download Viper4Android</button>
+        </div>
+
+        <!-- ReVanced -->
+        <div class="card" style="animation-delay: 0.7s;">
+            <img src="images/revanced.png" alt="ReVanced Icon">
+            <h3>ReVanced</h3>
+            <p>A continuation of the Vanced project, offering ad-free YouTube and advanced customization features.</p>
+            <button onclick="window.location.href='https://revanced.app/'">Download ReVanced</button>
+        </div>
+
+        <!-- Shamiko -->
+        <div class="card" style="animation-delay: 0.8s;">
+            <img src="images/shamiko.png" alt="Shamiko Icon">
+            <h3>Shamiko</h3>
+            <p>A Magisk module for hiding root modifications from apps that detect them.</p>
+            <button onclick="window.location.href='https://github.com/LSPosed/LSPosed.github.io/releases'">Download Shamiko</button>
+        </div>
+
+        <!-- Riru -->
+        <div class="card" style="animation-delay: 0.9s;">
+            <img src="images/riru.png" alt="Riru Icon">
+            <h3>Riru</h3>
+            <p>A Magisk module that provides an interface for other modules to work on Android without affecting system integrity.</p>
+            <button onclick="window.location.href='https://github.com/Riru-Dev/riru/releases'">Download Riru</button>
+        </div>
+
+        <!-- EdXposed -->
+        <div class="card" style="animation-delay: 1s;">
+            <img src="images/edxposed.png" alt="EdXposed Icon">
+            <h3>EdXposed</h3>
+            <p>A modern alternative to Xposed for Android 8.0 and above, offering a framework to run Xposed modules on newer devices.</p>
+            <button onclick="window.location.href='https://github.com/ElderDrivers/EdXposed/releases'">Download EdXposed</button>
+        </div>
+    </div>
+
+    <script>
+        particlesJS('tsparticles', {
+            particles: {
+                number: {
+                    value: 80,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: "#ffffff"
+                },
+                shape: {
+                    type: "circle",
+                    stroke: {
+                        width: 0,
+                        color: "#000000"
+                    }
+                },
+                opacity: {
+                    value: 0.5,
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 1,
+                        opacity_min: 0.1,
+                        sync: false
+                    }
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    anim: {
+                        enable: false,
+                        speed: 40,
+                        size_min: 0.1,
+                        sync: false
+                    }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#ffffff",
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false
+                }
+            }
+        });
+    </script>
+</body>
+</html>
