@@ -12,9 +12,10 @@
             background-color: black;
             color: white;
             font-family: 'Courier New', monospace;
+			margin: 0;
+			padding: 0;
             opacity: 0; /* Start hidden */
             animation: fadeIn 0.5s ease-in forwards; /* Fade-in animation */
-            position: relative; /* Relative positioning for particle background */
         }
 
         @keyframes fadeIn {
@@ -35,10 +36,10 @@
         /* Stylowanie napisu CUSTOM ROMS */
         .custom-roms-header {
             text-align: center;
-            font-size: 3em;
+            font-size: 2em;
             color: #FFFFFF;
             text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
-            margin-top: 20px;
+            margin: 20px 10px;
         }
 
         /* Stylowanie kart */
@@ -46,7 +47,8 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            margin-top: 30px;
+			gap: 20px;
+			padding: 10px;
         }
 
         .card {
@@ -54,9 +56,9 @@
             animation: fadeIn 0.5s ease-in forwards; /* Fade-in animation for cards */
             background-color: #1e1e1e;
             border-radius: 10px;
-            padding: 20px;
-            margin: 20px;
-            width: 300px;
+            padding: 15px;
+            width: 100%;
+			max-width: 300px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s;
         }
@@ -69,12 +71,14 @@
         .card h3 {
             text-align: center;
             color: #FFFFFF;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
+			font-size: 1.2em;
         }
 
         .card p {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+			font-size: 0.9em;
         }
 
         .card button {
@@ -87,6 +91,7 @@
             border-radius: 5px;
             cursor: pointer;
             margin-bottom: 10px;
+			font-size: 0.9em;
         }
 
         .card button:hover {
@@ -105,8 +110,6 @@
             margin-bottom: 20px;
         }
     </style>
-    <!-- Load tsParticles library -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
     <marquee scroll>
@@ -116,9 +119,9 @@
     <!-- Nagłówek z obrazem zamiast przycisku Home -->
     <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
         <a href="index.html">
-            <img src="home.png" alt="Home" style="width: 50px; height: 50px; margin-right: 20px; cursor: pointer;">
+            <img src="home.png" alt="Home" style="width: 40; height: 40px; margin-right: 10px; cursor: pointer;">
         </a>
-        <h1 class="custom-roms-header" style="flex-grow: 1; text-align: center;"><b>CUSTOM ROMS</b></h1>
+        <h1 class="custom-roms-header"><b>CUSTOM ROMS</b></h1>
     </div>
 
     <p class="info"><b>Don't worry if the rom has codename rubyx instead of ruby. This is the new codename corresponding to each of these phones (Redmi Note 12 Pro 5G/Discovery/Plus).<br>This means that this rom will work on all these phones.<br>(finally you won't have to look for codenames like rubypro to not mess up phones with other systems yaay!)</b></p>
