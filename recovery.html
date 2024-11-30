@@ -12,9 +12,10 @@
             background-color: black;
             color: white;
             font-family: 'Courier New', monospace;
+            margin: 0;
+            padding: 0;
             opacity: 0;
             animation: fadeIn 0.5s ease-in forwards;
-            position: relative; /* Relative positioning for particle background */
         }
 
         @keyframes fadeIn {
@@ -26,34 +27,33 @@
             }
         }
 
-        /* Stylowanie napisu Recovery */
         .recovery-title {
             text-align: center;
-            font-size: 3em;
+            font-size: 2em;
             color: #FFFFFF;
             text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
-            margin-top: 20px;
+            margin: 20px 10px;
         }
 
-        /* Stylowanie kart */
         .cards-container {
             display: flex;
-            justify-content: center;
             flex-wrap: wrap;
-            margin-top: 30px;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px;
         }
 
         .card {
-			opacity: 0; /* Start hidden */
-			animation: fadeIn 0.5s ease-in forwards; /* Fade-in animation for cards */
-
             background-color: #1e1e1e;
             border-radius: 10px;
-            padding: 20px;
-            margin: 20px;
-            width: 300px;
+            padding: 15px;
+            width: 100%;
+            max-width: 300px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: cardFadeIn 0.5s ease-in forwards;
         }
 
         .card:hover {
@@ -61,15 +61,42 @@
             box-shadow: 0 6px 12px rgba(255, 255, 255, 0.4);
         }
 
+        @keyframes cardFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Opóźnienie animacji dla różnych kart */
+        .card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+        .card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        .card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+        .card:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
         .card h3 {
             text-align: center;
             color: #FFFFFF;
-            margin-bottom: 15px;
+            font-size: 1.2em;
+            margin-bottom: 10px;
         }
 
         .card p {
+            font-size: 0.9em;
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .card button {
@@ -82,18 +109,59 @@
             border-radius: 5px;
             cursor: pointer;
             margin-bottom: 10px;
+            font-size: 0.9em;
         }
 
         .card button:hover {
             background-color: #4d4d4d;
         }
 
-        .card a {
-            color: #FFFFFF;
-            text-decoration: none;
-            font-weight: bold;
+        /* Responsywność */
+        @media (max-width: 768px) {
+            .recovery-title {
+                font-size: 1.8em;
+            }
+
+            .card {
+                padding: 10px;
+            }
+
+            .card h3 {
+                font-size: 1.1em;
+            }
+
+            .card p {
+                font-size: 0.85em;
+            }
+
+            .card button {
+                font-size: 0.85em;
+                padding: 8px;
+            }
         }
 
+        @media (max-width: 480px) {
+            .recovery-title {
+                font-size: 1.5em;
+            }
+
+            .card {
+                padding: 8px;
+            }
+
+            .card h3 {
+                font-size: 1em;
+            }
+
+            .card p {
+                font-size: 0.75em;
+            }
+
+            .card button {
+                font-size: 0.8em;
+                padding: 7px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -101,19 +169,15 @@
         I (and many other maintainers) am not responsible for bricked devices, dead SD cards, thermonuclear war, or you getting fired because the alarm app failed. Please do some research if you have any concerns about features included in ROMs before flashing! YOU are choosing to make these modifications, and if you point the finger at me for messing up your device, I will laugh at you. Hard &amp; a lot.
     </marquee>
 
-    <!-- Nagłówek z obrazem zamiast przycisku Home -->
     <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
         <a href="index.html">
-            <img src="home.png" alt="Home" style="width: 50px; height: 50px; margin-right: 20px; cursor: pointer;">
+            <img src="home.png" alt="Home" style="width: 40px; height: 40px; margin-right: 10px; cursor: pointer;">
         </a>
-        <h1 class="recovery-title" style="flex-grow: 1; text-align: center;">Recovery</h1>
+        <h1 class="recovery-title">Recovery</h1>
     </div>
 
-    <!-- Karty zamiast tabeli -->
     <div class="cards-container">
-
-        <!-- Karta 1 -->
-        <div class="card"  style="animation-delay: 0.1s;">
+        <div class="card">
             <h3>LineageOS Recovery by bengris</h3>
             <p><b>Unofficial</b> LineageOS recovery image created by <b>bengris32</b>. It is very universal and used most likely in every custom rom for this phone. Unmodded, <b>there is no ksu or magisk on it.</b></p>
             <button onclick="window.location.href='https://github.com/xiaomi-mediatek-devs/releases/releases/download/rubyx-20240911/boot.img';">
@@ -124,8 +188,7 @@
             </button>
         </div>
 
-        <!-- Karta 2 -->
-        <div class="card"  style="animation-delay: 0.2s;">
+        <div class="card">
             <h3>Pixel OS Recovery by kasun</h3>
             <p><b>Unofficial</b> Pixel OS recovery image created by <b>kasunherath</b>. It is actually LineageOS recovery, only for Pixel OS. <br><b><font color="red">USE ONLY WITH PIXELOS ROM BY KASUNHERATH.</font></b><br>Unmodded, <b>there is no ksu or magisk on it.</b></p>
             <button onclick="window.location.href='https://sourceforge.net/projects/rubypro/files/ROMs/PixelOS/fourteen/2024-09-18/boot.img/download';">
@@ -136,8 +199,7 @@
             </button>
         </div>
 
-        <!-- Karta 3 -->
-        <div class="card"  style="animation-delay: 0.3s;">
+        <div class="card">
             <h3>Infinity X Recovery by Allien10x</h3>
             <p><b>Unofficial</b> Infinity X or Project Infinity recovery image created by <b>Allien10x</b>. It is actually LineageOS recovery, only for Infinity X. <br><b><font color="red">USE ONLY WITH INFINITY X ROM BY ALLIEN10X.</font></b><br>Unmodded, <b>there is no ksu or magisk on it.</b></p>
             <button onclick="window.location.href='https://sourceforge.net/projects/rubypro/files/ROMs/PixelOS/fourteen/2024-09-18/boot.img/download';">
@@ -148,18 +210,13 @@
             </button>
         </div>
 
-        <!-- Karta 4 -->
-        <div class="card"  style="animation-delay: 0.4s;">
+        <div class="card">
             <h3>HyperOS recovery by Xiaomi</h3>
-            <p><b>Official</b> HyperOS recovery image.
-			Basically, this is the stock recovery image that is in HyperOS.
-			The button redirects to the xmfirmwaredownloader page, where you can download HyperOS stock images.
-			Just download the Fastboot rom (not recovery) and extract the .tar.gz file and there should be a boot.img in the img folder.</p>
+            <p><b>Official</b> HyperOS recovery image. Basically, this is the stock recovery image that is in HyperOS.</p>
             <button onclick="window.location.href='https://xmfirmwareupdater.com/hyperos/ruby/';">
                 xmfirmwaredownloader.com
             </button>
         </div>
-
     </div>
 </body>
 </html>
