@@ -35,17 +35,18 @@
 
         .custom-roms-header {
             text-align: center;
-            font-size: 3em;
+            font-size: 2em;
             color: #FFFFFF;
             text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
-            margin-top: 20px;
+            margin: 20px 10px;
         }
 
         .cards-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            margin-top: 30px;
+			gap: 20px;
+			padding: 10px;
         }
 
         .card {
@@ -53,9 +54,9 @@
             animation: fadeIn 0.5s ease-in forwards;
             background-color: #1e1e1e;
             border-radius: 10px;
-            padding: 20px;
-            margin: 20px;
-            width: 300px;
+            padding: 15px;
+            width: 100%;
+			max-width: 300px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s;
         }
@@ -68,12 +69,14 @@
         .card h3 {
             text-align: center;
             color: #FFFFFF;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
+			font-size: 1.2em;
         }
 
         .card p {
+			font-size: 0.9em;
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .card button {
@@ -86,6 +89,7 @@
             border-radius: 5px;
             cursor: pointer;
             margin-bottom: 10px;
+			font-size: 0.9em;
         }
 
         .card button:hover {
@@ -101,6 +105,52 @@
         marquee {
             margin-bottom: 20px;
         }
+		        /* Responsywność */
+        @media (max-width: 768px) {
+            .recovery-title {
+                font-size: 1.8em;
+            }
+
+            .card {
+                padding: 10px;
+            }
+
+            .card h3 {
+                font-size: 1.1em;
+            }
+
+            .card p {
+                font-size: 0.85em;
+            }
+
+            .card button {
+                font-size: 0.85em;
+                padding: 8px;
+            }
+}
+
+        @media (max-width: 480px) {
+            .recovery-title {
+                font-size: 1.5em;
+            }
+
+            .card {
+                padding: 8px;
+            }
+
+            .card h3 {
+                font-size: 1em;
+            }
+
+            .card p {
+                font-size: 0.75em;
+            }
+
+            .card button {
+                font-size: 0.8em;
+                padding: 7px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -111,68 +161,60 @@
     <!-- Header with home image -->
     <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
         <a href="index.html">
-            <img src="home.png" alt="Home" style="width: 50px; height: 50px; margin-right: 20px; cursor: pointer;">
+            <img src="home.png" alt="Home" style="width: 40px; height: 40px; margin-right: 10px; cursor: pointer;">
         </a>
-        <h1 class="custom-roms-header" style="flex-grow: 1; text-align: center;"><b>TOOLS</b></h1>
+        <h1 class="custom-roms-header"><b>TOOLS</b></h1>
     </div>
 
-    <div class="cards-container">
-        <!-- Card 1: SP Flash Tool -->
-        <div class="card" style="animation-delay: 0.1s;">
-            <h3>SP Flash Tool</h3>
-            <p>SP Flash Tool is used for flashing firmware on Mediatek devices. It allows you to install custom ROMs and stock firmware.</p>
-            <button><a href="https://spflashtool.com" style="color: white;">Download SP Flash Tool</a></button>
-        </div>
-
-        <!-- Card 2: Xiaomi Drivers -->
-        <div class="card" style="animation-delay: 0.2s;">
-            <h3>Xiaomi Drivers</h3>
-            <p>These drivers are necessary to connect your Xiaomi phone to your PC. They ensure proper communication for flashing or debugging.</p>
-            <button><a href="https://xiaomidriver.com" style="color: white;">Download Xiaomi Drivers</a></button>
-        </div>
-
-        <!-- Card 3: Pixel Flasher -->
-        <div class="card" style="animation-delay: 0.3s;">
-            <h3>Pixel Flasher</h3>
-            <p>Pixel Flasher is a tool designed to flash Pixel ROMs. It allows users to flash official and custom firmware on their Pixel devices.</p>
-            <button><a href="https://pixelflasher.com" style="color: white;">Download Pixel Flasher</a></button>
-        </div>
-
-        <!-- Card 4: MTKClient -->
-        <div class="card" style="animation-delay: 0.4s;">
-            <h3>MTKClient</h3>
-            <p>MTKClient is a powerful tool for Mediatek devices, offering features like unlocking bootloaders, flashing firmware, and debugging.</p>
-            <button><a href="https://mtkclient.com" style="color: white;">Download MTKClient</a></button>
-        </div>
-
-        <!-- Card 5: MiFlash Tool -->
-        <div class="card" style="animation-delay: 0.5s;">
-            <h3>MiFlash Tool</h3>
-            <p>MiFlash Tool is a tool to flash stock MIUI firmware on Xiaomi phones. It is simple and effective for restoring a bricked device.</p>
-            <button><a href="https://xiaomiflash.com" style="color: white;">Download MiFlash Tool</a></button>
-        </div>
-
-        <!-- Card 6: XiaomiTool V2 -->
-        <div class="card" style="animation-delay: 0.6s;">
-            <h3>XiaomiTool V2</h3>
-            <p>This is a tool with which you will fix your bricked phone with a few simple clicks. In addition, you can use it to modify your phone a bit and, among other things, upload a different firmware. It's very simple (a kid who doesn't know anything about it would figure it out), but I know from my experience that it can mess up dm-verity verification and it won't pass properly.</p>
-            <button><a href="https://xiaomitoolv2.com" style="color: white;">Download XiaomiTool V2</a></button>
-        </div>
-
-        <!-- Card 7: Tool Placeholder -->
-        <div class="card" style="animation-delay: 0.7s;">
-            <h3>Tool</h3>
-            <p>Nothing here, yet</p>
-            <button>Nothing here, yet</button>
-        </div>
-        
-        <!-- Card 8: Tool Placeholder -->
-        <div class="card" style="animation-delay: 0.8s;">
-            <h3>Tool</h3>
-            <p>Nothing here, yet</p>
-            <button>Nothing here, yet</button>
-        </div>
+<div class="cards-container">
+    <div class="card" style="animation-delay: 0.1s;">
+        <h3>SP Flash Tool</h3>
+        <p>SP Flash Tool is used for flashing firmware on Mediatek devices. It allows you to install custom ROMs and stock firmware.</p>
+        <button onclick="location.href='https://spflashtool.com'" style="color: black;">Download SP Flash Tool</button>
     </div>
+
+    <div class="card" style="animation-delay: 0.2s;">
+        <h3>Xiaomi Drivers</h3>
+        <p>These drivers are necessary to connect your Xiaomi phone to your PC. They ensure proper communication for flashing or debugging.</p>
+        <button onclick="location.href='https://xiaomidriver.com'" style="color: black;">Download Xiaomi Drivers</button>
+    </div>
+
+    <div class="card" style="animation-delay: 0.3s;">
+        <h3>Pixel Flasher</h3>
+        <p>Pixel Flasher is a tool designed to flash Pixel ROMs. It allows users to flash official and custom firmware on their Pixel devices.</p>
+        <button onclick="location.href='https://pixelflasher.com'" style="color: black;">Download Pixel Flasher</button>
+    </div>
+
+    <div class="card" style="animation-delay: 0.4s;">
+        <h3>MTKClient</h3>
+        <p>MTKClient is a powerful tool for Mediatek devices, offering features like unlocking bootloaders, flashing firmware, and debugging.</p>
+        <button onclick="location.href='https://mtkclient.com'" style="color: black;">Download MTKClient</button>
+    </div>
+
+    <div class="card" style="animation-delay: 0.5s;">
+        <h3>MiFlash Tool</h3>
+        <p>MiFlash Tool is a tool to flash stock MIUI firmware on Xiaomi phones. It is simple and effective for restoring a bricked device.</p>
+        <button onclick="location.href='https://xiaomiflash.com'" style="color: black;">Download MiFlash Tool</button>
+    </div>
+
+    <div class="card" style="animation-delay: 0.6s;">
+        <h3>XiaomiTool V2</h3>
+        <p>This is a tool with which you will fix your bricked phone with a few simple clicks. In addition, you can use it to modify your phone a bit and, among other things, upload a different firmware. It's very simple (a kid who doesn't know anything about it would figure it out), but I know from my experience that it can mess up dm-verity verification and it won't pass properly.</p>
+        <button onclick="location.href='https://xiaomitoolv2.com'" style="color: black;">Download XiaomiTool V2</button>
+    </div>
+
+    <div class="card" style="animation-delay: 0.7s;">
+        <h3>Tool</h3>
+        <p>Nothing here, yet</p>
+        <button>Nothing here, yet</button>
+    </div>
+
+    <div class="card" style="animation-delay: 0.8s;">
+        <h3>Tool</h3>
+        <p>Nothing here, yet</p>
+        <button>Nothing here, yet</button>
+    </div>
+</div>
 
     <p align="center"><font color="#4d4d4d">Note: The description for each tool was generated by artificial intelligence (ChatGPT). So for any errors, blame him.</font></p>
 </body>
