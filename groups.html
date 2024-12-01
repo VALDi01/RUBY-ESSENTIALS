@@ -14,6 +14,8 @@
             font-family: 'Courier New', monospace;
             opacity: 0;
             animation: fadeIn 0.5s ease-in forwards;
+			margin: 0;
+			padding: 0;
         }
 
         @keyframes fadeIn {
@@ -23,9 +25,9 @@
 
         h1 {
             text-align: center;
-            font-size: 2.5em;
+            font-size: 2em;
             text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
-            margin: 20px 0;
+            margin: 20px 10px;
         }
 
         .text-container {
@@ -39,11 +41,12 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: 20px;
+			gap: 20px;
+			padding: 10px;
         }
 
         a {
-            width: 250px; /* Zwiększono szerokość, aby pomieścić długie teksty */
+            width: 330px; /* Zwiększono szerokość, aby pomieścić długie teksty */
             height: 50px;
             background-color: #949494;
             border: none;
@@ -81,9 +84,9 @@
     </marquee>
     <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
         <a href="index.html" class="home-button">
-            <img src="home.png" alt="Home" style="width: 50px; height: 50px;">
+            <img src="home.png" alt="Home" style="width: 40px; height: 40px;">
         </a>
-        <h1 class="custom-mods-header" style="flex-grow: 1; text-align: center;"><b>GROUPS</b></h1>
+        <h1 class="custom-mods-header"><b>GROUPS</b></h1>
     </div>
 
     <div class="text-container">
