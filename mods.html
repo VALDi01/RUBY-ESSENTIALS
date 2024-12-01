@@ -34,17 +34,18 @@
 
         .custom-mods-header {
             text-align: center;
-            font-size: 3em;
+            font-size: 2em;
             color: #FFFFFF;
             text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
-            margin-top: 20px;
+            margin: 20px 10px;
         }
 
         .cards-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            margin-top: 30px;
+			gap: 20px;
+			padding: 10px;
         }
 
         .card {
@@ -52,9 +53,9 @@
             animation: fadeIn 0.5s ease-in forwards;
             background-color: #1e1e1e;
             border-radius: 10px;
-            padding: 20px;
-            margin: 20px;
-            width: 300px;
+            padding: 15px;
+            width: 100%;
+			max-width: 300px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s;
         }
@@ -67,12 +68,14 @@
         .card h3 {
             text-align: center;
             color: #FFFFFF;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
+			font-size: 1.2em;
         }
 
         .card p {
+			font-size:0.9em;
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .card button {
@@ -85,6 +88,7 @@
             border-radius: 5px;
             cursor: pointer;
             margin-bottom: 10px;
+			font-size:0.9em;
         }
 
         .card button:hover {
@@ -107,6 +111,51 @@
             width: 50px;
             height: 50px;
         }
+		        /* Responsywność */
+        @media (max-width: 768px) {
+            .recovery-title {
+                font-size: 1.8em;
+            }
+
+            .card {
+                padding: 10px;
+            }
+
+            .card h3 {
+                font-size: 1.1em;
+            }
+
+            .card p {
+                font-size: 0.85em;
+            }
+
+            .card button {
+                font-size: 0.85em;
+                padding: 8px;
+            }
+}
+
+        @media (max-width: 480px) {
+            .recovery-title {
+                font-size: 1.5em;
+            }
+
+            .card {
+                padding: 8px;
+            }
+
+            .card h3 {
+                font-size: 1em;
+            }
+
+            .card p {
+                font-size: 0.75em;
+            }
+
+            .card button {
+                font-size: 0.8em;
+                padding: 7px;
+            }
     </style>
 </head>
 <body>
@@ -116,9 +165,9 @@
 
     <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
         <a href="index.html">
-            <img src="home.png" alt="Home" style="width: 50px; height: 50px; margin-right: 20px; cursor: pointer;">
+            <img src="home.png" alt="Home" style="width: 40px; height: 40px; margin-right: 10px; cursor: pointer;">
         </a>
-        <h1 class="custom-mods-header" style="flex-grow: 1; text-align: center;"><b>MODS</b></h1>
+        <h1 class="custom-mods-header"><b>MODS</b></h1>
     </div>
 
     <div class="cards-container">
